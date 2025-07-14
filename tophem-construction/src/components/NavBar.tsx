@@ -39,13 +39,14 @@ function NavBar() {
 
             <div className='navigate'>
                 <ul className='fs-5'>
-                    <a href=""><li>Home</li></a>
-                    <a href=""><li>About us</li></a>
-                    <a href=""><li>Civil engineering</li></a>
-                    <a href=""><li>Contact</li></a>
+                    <a href="/about"><li>About us</li></a>
+                    <a href="/services"><li>Services</li></a>
+                    <a href="/projects"><li>Projects</li></a>
+                    <a href="/contact"><li>Contact</li></a>
                 </ul>
             </div>
-            <div>
+            <div className="pre-nav">
+                <i className="bi bi-telephone"></i>
                 <h3>+2348033784778</h3>
             </div>
             <div className='mobile-menu' onClick={handleMobileNav}>
@@ -54,10 +55,11 @@ function NavBar() {
             <div className="mobile-nav" ref={mobileDiv}>
                 
                     <ul className='fs-5'>
-                        <a href=""><li>Home</li></a>
-                        <a href=""><li>About us</li></a>
-                        <a href=""><li>Civil engineering</li></a>
-                        <a href=""><li>Contact</li></a>
+                        <a href="/"><li>Home</li></a>
+                        <a href="/about"><li>About us</li></a>
+                        <a href="/services"><li>Services</li></a>
+                        <a href="/projects"><li>Projects</li></a>
+                        <a href="/contact"><li>Contact</li></a>
                     </ul>
                     <i className="bi bi-x-lg me-3" onClick={handleClose}></i>
                 

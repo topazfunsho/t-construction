@@ -7,6 +7,8 @@ import logo3 from "../assets/fast.png"
 import logo4 from "../assets/firs.png"
 import logo5 from "../assets/jk.png"
 import logo6 from "../assets/sfg.png"
+import Footer from './Footer'
+import NavBar from './NavBar'
 
 import { useState } from "react";
 
@@ -24,7 +26,7 @@ function Home() {
       }
   return (
     <> 
-            
+        <NavBar />    
         {/* hero section  */}
         <div className='hero'>
             <div >
@@ -194,7 +196,7 @@ function Home() {
 
 
 
-        
+        <Footer />
     </>
   )
 }

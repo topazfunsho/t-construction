@@ -20,6 +20,10 @@ a i{
   display: flex;
   padding: 0.5rem 3rem;
 }
+.nav-section h3{
+  font-size: 1.3rem;
+  font-weight: 300;
+}
 .logo img{
   width: 150px;
 }
@@ -27,11 +31,13 @@ a i{
   list-style: none;
   display: inline-flex;
   gap: 25px;
-  font-weight: 700;
+  font-weight: 400;
+  text-transform: uppercase;
  }
 .navigate a{
   color: rgb(52, 52, 52);
   text-decoration: none;
+  font-size: 1rem;
 
 }
 .navigate a:hover{
@@ -50,6 +56,17 @@ a i{
   align-items: center ;
   color: white ;
   height: 80vh; 
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6)), url('./assets/hero.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.hero2{
+  display: flex;
+  justify-content: center; 
+  align-items: center ;
+  color: white ;
+  height: 20vh; 
   background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0, 0, 0, 0.6)), url('./assets/hero.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -233,6 +250,8 @@ a i{
   text-align: center;
 }
 
+
+
 @media(max-width: 450px){
   .pre-nav{
     display: none;
@@ -368,5 +387,12 @@ a i{
   }
   .footer-section{
     padding: 3rem .8rem;
+  }
+  .about-page{
+    padding: 1rem;
+    text-align: justify;
+  }
+  .about-page .box1{
+    margin-top: 2rem;
   }
 }

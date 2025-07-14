@@ -13,19 +13,19 @@ function Footer() {
                 <div className=''>
                     <h3>NAVIGATE</h3>
                     <ul style={{listStyle: 'none', display: "block",fontWeight: '700', lineHeight: '40px'}} className='fs-6'>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href=""><li>Home</li></a>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href=""><li>About us</li></a>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href=""><li>Civil engineering</li></a>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9',  }} href=""><li>Contact</li></a>
+                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href="/"><li>Home</li></a>
+                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href="/about"><li>About us</li></a>
+                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href="/projects"><li>Civil engineering</li></a>
+                        <a style={{textDecoration: 'none', color: '#a9a9a9',  }} href="/contact"><li>Contact</li></a>
                     </ul>
                 </div>
                 <div className=''>
                     <h3>COMPANY</h3>
                 <ul style={{listStyle: 'none', display: "block",fontWeight: '700', lineHeight: '40px'}} className='fs-6'>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href=""><li>Blog</li></a>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href=""><li>Projects</li></a>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href=""><li>Machinery</li></a>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9',  }} href=""><li>Staffs</li></a>
+                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href="/blogs"><li>Blog</li></a>
+                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href="/projects"><li>Projects</li></a>
+                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href="/machinery"><li>Machinery</li></a>
+                        <a style={{textDecoration: 'none', color: '#a9a9a9',  }} href="/staffs"><li>Staffs</li></a>
                     </ul>
                 </div>
                 <div className='' style={{width: '400px'}}>
