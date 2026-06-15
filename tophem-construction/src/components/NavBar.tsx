@@ -1,72 +1,97 @@
 import { useRef } from "react";
+import { NavLink } from "react-router-dom";
+import "../App.css";
 
 function NavBar() {
+  const mobileDiv = useRef<HTMLDivElement | null>(null);
 
-    const mobileDiv = useRef<HTMLDivElement | null>(null);
-        
-    function handleMobileNav() {
-        if (mobileDiv.current) mobileDiv.current.style.display = 'flex';
-        
-      }
-      function handleClose() {
-        if (mobileDiv.current) mobileDiv.current.style.display = 'none';
-        
-      }  
-        
-    
+  function handleMobileNav() {
+    if (mobileDiv.current) mobileDiv.current.style.display = "flex";
+  }
+
+  function handleClose() {
+    if (mobileDiv.current) mobileDiv.current.style.display = "none";
+  }
+
   return (
     <>
-        {/* pre nav section  */}
-        <div className="px-5 justify-content-between bg-primary text-white fs-6 pre-nav sm:hidden">
-            <div className="col-4">
-                Welcome to Tophem Construction
-            </div>
-            <div className="">
-                <div className="flex">
-                    <i className="bi-envelope"> construction@tophem.com</i>
-                </div>
-            </div>
-            <div className=" ">
-                <a href="#" target="_blank"><i className="bi-linkedin me-2"></i></a>
-                <a href="#" target="_blank"><i className="bi-instagram"></i></a>
-            </div>
+      {/* Pre-nav */}
+      <div className="px-5 justify-content-between fs-6 pre-nav">
+        <div>
+          <i className="bi bi-geo-alt-fill me-1"></i>
+          No. 5 Shallom Road, Gwarimpa, Abuja, Nigeria
         </div>
-        {/* navbar section  */}
-        <div className='justify-content-between align-items-center nav-section' style={{backgroundColor: 'whitesmoke'}}>
-            <div className='logo'>
-                <a href="/"><img src="https://iili.io/FYenpwP.png" alt="" /></a>
-            </div>
+        <div>
+          <i className="bi-envelope me-1"></i>
+          construction@tophem.com
+        </div>
+        <div>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <i className="bi-linkedin me-3"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <i className="bi-instagram me-3"></i>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noreferrer">
+            <i className="bi-facebook"></i>
+          </a>
+        </div>
+      </div>
 
-            <div className='navigate'>
-                <ul className='fs-5'>
-                    <a href="/about"><li>About us</li></a>
-                    <a href="/services"><li>Services</li></a>
-                    <a href="/projects"><li>Projects</li></a>
-                    <a href="/contact"><li>Contact</li></a>
-                </ul>
-            </div>
-            <div className="pre-nav">
-                <i className="bi bi-telephone"></i>
-                <h3>+2348033784778</h3>
-            </div>
-            <div className='mobile-menu' onClick={handleMobileNav}>
-                <i className="bi bi-list"></i>
-            </div>
-            <div className="mobile-nav" ref={mobileDiv}>
-                
-                    <ul className='fs-5'>
-                        <a href="/"><li>Home</li></a>
-                        <a href="/about"><li>About us</li></a>
-                        <a href="/services"><li>Services</li></a>
-                        <a href="/projects"><li>Projects</li></a>
-                        <a href="/contact"><li>Contact</li></a>
-                    </ul>
-                    <i className="bi bi-x-lg me-3" onClick={handleClose}></i>
-                
-            </div>
+      {/* Main Navbar */}
+      <nav className="nav-section">
+        <div className="logo">
+          <NavLink to="/">
+            <img src="https://iili.io/FYenpwP.png" alt="Tophem Construction Logo" />
+          </NavLink>
         </div>
+
+        <div className="navigate">
+          <ul>
+            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+              <li>Home</li>
+            </NavLink>
+            <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
+              <li>About Us</li>
+            </NavLink>
+            <NavLink to="/services" className={({ isActive }) => (isActive ? "active" : "")}>
+              <li>Services</li>
+            </NavLink>
+            <NavLink to="/projects" className={({ isActive }) => (isActive ? "active" : "")}>
+              <li>Projects</li>
+            </NavLink>
+            <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
+              <li>Contact</li>
+            </NavLink>
+          </ul>
+        </div>
+
+        <div className="nav-phone pre-nav">
+          <i className="bi bi-telephone-fill"></i>
+          <span>+234 803 378 4778</span>
+        </div>
+
+        <div className="mobile-menu" onClick={handleMobileNav}>
+          <i className="bi bi-list"></i>
+        </div>
+
+        {/* Mobile Nav */}
+        <div className="mobile-nav" ref={mobileDiv}>
+          <div className="mobile-nav-header">
+            <img src="https://iili.io/FYenpwP.png" alt="Logo" style={{ width: "100px" }} />
+            <i className="bi bi-x-lg" onClick={handleClose}></i>
+          </div>
+          <ul>
+            <NavLink to="/" onClick={handleClose}><li>Home</li></NavLink>
+            <NavLink to="/about" onClick={handleClose}><li>About Us</li></NavLink>
+            <NavLink to="/services" onClick={handleClose}><li>Services</li></NavLink>
+            <NavLink to="/projects" onClick={handleClose}><li>Projects</li></NavLink>
+            <NavLink to="/contact" onClick={handleClose}><li>Contact</li></NavLink>
+          </ul>
+        </div>
+      </nav>
     </>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;

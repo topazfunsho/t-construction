@@ -1,46 +1,90 @@
-
+import { NavLink } from "react-router-dom";
 
 function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <>
-    {/* footer section  */}
-    <div className='bg-dark  text-white footer-section'>
-            <div className='footer-section-logo'>
-                <a href="/"><img src="https://iili.io/FYenpwP.png" alt="" /></a>
-            
+      <footer className="footer">
+        <div className="footer-grid">
+          {/* Brand */}
+          <div className="footer-brand">
+            <NavLink to="/">
+              <img src="https://iili.io/FYenpwP.png" alt="Tophem Construction" />
+            </NavLink>
+            <p>
+              Tophem Construction delivers world-class infrastructure across Nigeria —
+              built on trust, precision, and lasting quality.
+            </p>
+            <div className="footer-socials">
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <i className="bi bi-linkedin"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook">
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter">
+                <i className="bi bi-twitter-x"></i>
+              </a>
             </div>
-            <div className='footer-nav'>
-                <div className=''>
-                    <h3>NAVIGATE</h3>
-                    <ul style={{listStyle: 'none', display: "block",fontWeight: '700', lineHeight: '40px'}} className='fs-6'>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href="/"><li>Home</li></a>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href="/about"><li>About us</li></a>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href="/projects"><li>Civil engineering</li></a>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9',  }} href="/contact"><li>Contact</li></a>
-                    </ul>
-                </div>
-                <div className=''>
-                    <h3>COMPANY</h3>
-                <ul style={{listStyle: 'none', display: "block",fontWeight: '700', lineHeight: '40px'}} className='fs-6'>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href="/blogs"><li>Blog</li></a>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href="/projects"><li>Projects</li></a>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9', }} href="/machinery"><li>Machinery</li></a>
-                        <a style={{textDecoration: 'none', color: '#a9a9a9',  }} href="/staffs"><li>Staffs</li></a>
-                    </ul>
-                </div>
-                <div className='' style={{width: '400px'}}>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptate repellendus vitae vel ad et tempore, esse hic consectetur incidunt voluptas perspiciatis iure accusamus dicta ex cumque? Explicabo, accusantium placeat!</p>
-                    <a href="#" target="_blank"><i className="bi-linkedin me-5 fs-1"></i></a>
-                    <a href="#" target="_blank"><i className="bi-instagram fs-1"></i></a>
-                </div>
+          </div>
+
+          {/* Navigate */}
+          <div className="footer-col">
+            <h4>Navigate</h4>
+            <ul>
+              <li><NavLink to="/">Home</NavLink></li>
+              <li><NavLink to="/about">About Us</NavLink></li>
+              <li><NavLink to="/services">Services</NavLink></li>
+              <li><NavLink to="/projects">Projects</NavLink></li>
+              <li><NavLink to="/contact">Contact</NavLink></li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div className="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><NavLink to="/services">Road Construction</NavLink></li>
+              <li><NavLink to="/services">Building Construction</NavLink></li>
+              <li><NavLink to="/services">Civil Engineering</NavLink></li>
+              <li><NavLink to="/services">General Contracting</NavLink></li>
+              <li><NavLink to="/services">Project Consultation</NavLink></li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="footer-col">
+            <h4>Contact Us</h4>
+            <div className="footer-contact-item">
+              <i className="bi bi-geo-alt-fill"></i>
+              <span>No. 5 Shallom Road, Gwarimpa, Abuja, Nigeria</span>
             </div>
+            <div className="footer-contact-item">
+              <i className="bi bi-telephone-fill"></i>
+              <span>+234 803 378 4778</span>
+            </div>
+            <div className="footer-contact-item">
+              <i className="bi bi-envelope-fill"></i>
+              <span>construction@tophem.com</span>
+            </div>
+            <div className="footer-contact-item">
+              <i className="bi bi-clock-fill"></i>
+              <span>Mon – Sat: 8:00 AM – 6:00 PM</span>
+            </div>
+          </div>
         </div>
-        
-        <div className='footer-footer'>
-            <p>&copy;All Rights Reserved. date Tophem Constructions</p>
+
+        <div className="footer-bottom">
+          <p>&copy; {year} Tophem Construction Ltd. All Rights Reserved.</p>
+          <p>Built with dedication &amp; precision in Nigeria.</p>
         </div>
+      </footer>
     </>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
