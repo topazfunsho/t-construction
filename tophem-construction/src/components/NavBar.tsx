@@ -68,7 +68,7 @@ function NavBar() {
 
         <div className="nav-phone pre-nav">
           <i className="bi bi-telephone-fill"></i>
-          <span>+234 803 378 4778</span>
+          <span className="text-white">+234 803 378 4778</span>
         </div>
 
         <div className="mobile-menu" onClick={handleMobileNav}>
